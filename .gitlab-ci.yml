@@ -41,6 +41,9 @@ variables:
   DOCKER_DIR: virtual-device
   MULTIPLATFORM_BUILD: "true"
   MULTIPLATFORM_PLATFORMS: "linux/amd64,linux/arm64"
+  DOCKER_HOST: "tcp://docker:2376"
+  DOCKER_TLS_VERIFY: "1"
+  DOCKER_CERT_PATH: "/certs/client"
 
 # Exclude publish jobs - the Virtual Device is published from mender-qa together with the rest
 build:docker:
